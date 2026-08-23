@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-wrapper">
+            <!-- Display Section -->
+            <div class="display-section">
+                <div class="history-toggle" title="Toggle calculation history">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="display-area">
+                    <input type="text" class="display" id="display" placeholder="0" readonly>
+                    <div class="expression-info" id="expressionInfo"></div>
+                </div>
+            </div>
+
+            <!-- Memory Buttons -->
+            <div class="memory-buttons">
+                <button class="mem-btn" id="mc" title="Memory Clear">MC</button>
+                <button class="mem-btn" id="mr" title="Memory Recall">MR</button>
+                <button class="mem-btn" id="mplus" title="Memory Add">M+</button>
+                <button class="mem-btn" id="mminus" title="Memory Subtract">M-</button>
+            </div>
+
+            <!-- Main Calculator Buttons -->
+            <div class="buttons">
+                <button class="btn function-btn" data-action="clear">C</button>
+                <button class="btn function-btn" data-action="delete">⌫</button>
+                <button class="btn function-btn" data-action="toggle">±</button>
+                <button class="btn operator-btn" data-operator="/">÷</button>
+
+                <button class="btn number-btn" data-number="7">7</button>
+                <button class="btn number-btn" data-number="8">8</button>
+                <button class="btn number-btn" data-number="9">9</button>
+                <button class="btn operator-btn" data-operator="*">×</button>
+
+                <button class="btn number-btn" data-number="4">4</button>
+                <button class="btn number-btn" data-number="5">5</button>
+                <button class="btn number-btn" data-number="6">6</button>
+                <button class="btn operator-btn" data-operator="-">−</button>
+
+                <button class="btn number-btn" data-number="1">1</button>
+                <button class="btn number-btn" data-number="2">2</button>
+                <button class="btn number-btn" data-number="3">3</button>
+                <button class="btn operator-btn" data-operator="+">+</button>
+
+                <button class="btn number-btn zero" data-number="0">0</button>
+                <button class="btn number-btn" data-number=".">.</button>
+                <button class="btn equals-btn" data-action="equals">=</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button class="history-clear-btn" id="clearHistory" title="Clear history">×</button>
+            </div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
